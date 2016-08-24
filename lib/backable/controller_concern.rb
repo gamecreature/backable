@@ -4,6 +4,7 @@ module Backable
     extend ActiveSupport::Concern
 
     included do 
+      helper_method :backable_param
       helper_method :backable_history
       helper_method :backable_future
       helper_method :backable_back_path
