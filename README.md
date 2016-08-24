@@ -3,6 +3,18 @@
 A little gem for supporting back history in your applicaton. 
 It uses a simple request-parameter 'back' with every back-path separated with a '|'.
 
+## Installation
+Add this line to your application's Gemfile:
+
+```ruby
+gem 'backable'
+```
+
+And then execute:
+```bash
+$ bundle
+```
+
 
 ## Usage
 
@@ -83,18 +95,6 @@ Available view-helper methods:
 | backable_history      | Returns and array of the previous paths
 | backable_future       | Returns the future paths (pushed on the stack in this request)
 
-
-## Installation
-Add this line to your application's Gemfile:
-
-```ruby
-gem 'backable'
-```
-
-And then execute:
-```bash
-$ bundle
-```
 
 ## License
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
