@@ -3,11 +3,13 @@ module Backable
     extend ActiveSupport::Concern
 
     included do
-      helper_method :backable_param
-      helper_method :backable_history
-      helper_method :backable_future
-      helper_method :backable_back_path
-      helper_method :backable_url_for
+      if respond_to?(:helper_method)
+        helper_method :backable_param
+        helper_method :backable_history
+        helper_method :backable_future
+        helper_method :backable_back_path
+        helper_method :backable_url_for
+      end
     end
 
     def backable_param( history=nil)
